@@ -8,14 +8,17 @@
     <Version>1.6.2</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BepInEx.Core" Version="5.4.17" />
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\Libs\Valheim\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="assembly_utils">
       <HintPath>..\..\Libs\Valheim\assembly_utils.dll</HintPath>
     </Reference>
     <Reference Include="assembly_valheim">
       <HintPath>..\..\Libs\Valheim\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\Libs\Valheim\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="CreatureLevelControl">
       <HintPath>..\..\Libs\Smoothbrain-CreatureLevelAndLootControl\CreatureLevelControl.dll</HintPath>

@@ -16,6 +16,7 @@ namespace Valheim.CustomRaids.Spawns
         {
             SpawnModifiers.Add(SpawnModifierSetFaction.Instance);
             SpawnModifiers.Add(SpawnModifierRotatePrefab.Instance);
+            SpawnModifiers.Add(SpawnModifierTranslatePrefab.Instance);
 
             SpawnModifiers.Add(SpawnModifierLoaderCLLC.BossAffix);
             SpawnModifiers.Add(SpawnModifierLoaderCLLC.ExtraEffect);

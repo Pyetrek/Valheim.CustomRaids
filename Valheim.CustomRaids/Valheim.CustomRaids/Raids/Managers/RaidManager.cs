@@ -11,6 +11,7 @@ public static class RaidManager
     private static ConditionalWeakTable<RandomEvent, Raid> RaidTable = new();
     private static Dictionary<string, List<Action<RandomEvent, Raid>>> Configurations = new();
     private static Dictionary<string, Raid> RaidsByName = new();
+    private static Dictionary<string, RandomEvent> RandomEventsByName = new();
 
     static RaidManager()
     {
@@ -19,6 +20,7 @@ public static class RaidManager
             RaidTable = new();
             Configurations = new();
             RaidsByName = new();
+            RandomEventsByName = new();
         });
     }
 
@@ -40,6 +42,11 @@ public static class RaidManager
         return RaidsByName.TryGetValue(raidName, out raid);
     }
 
+    public static bool TryGetRandomEvent(string raidName, out RandomEvent randomEvent)
+    {
+        return RandomEventsByName.TryGetValue(raidName, out randomEvent);
+    }
+
     public static void RegisterRaid(RandomEvent randomEvent, Raid raid)
     {
         // Check if raid is already registered. If so, replace it.
@@ -50,6 +57,7 @@ public static class RaidManager
 
         RaidTable.Add(randomEvent, raid);
         RaidsByName[raid.Name] = raid;
+        RandomEventsByName[raid.Name] = randomEvent;
 
         // Apply configurations
         if (Configurations.TryGetValue(randomEvent.m_name, out var namedRaidConfigurations))

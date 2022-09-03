@@ -228,6 +228,12 @@ namespace Valheim.CustomRaids.Configuration.ConfigTypes
         public ConfigurationEntry<float> RotationY = new(0, "Rotate the spawned object on the y axis. Defaults to 0");
 
         public ConfigurationEntry<float> RotationZ = new(0, "Rotate the spawned object on the z axis. Defaults to 0");
+
+        public ConfigurationEntry<float> TranslateX = new(0, "Rotate the spawned object on the x axis. Defaults to 0");
+
+        public ConfigurationEntry<float> TranslateY = new(0, "Rotate the spawned object on the y axis. Defaults to 0");
+
+        public ConfigurationEntry<float> TranslateZ = new(0, "Rotate the spawned object on the z axis. Defaults to 0");
         #endregion
     }
 
